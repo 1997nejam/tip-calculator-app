@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+.container {
+  display: flex;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 1030px;
+}
+.output {
+  background-color: hsl(183, 100%, 15%);
+  width: 50%;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  color: hsl(172, 67%, 45%);
+}
+input,
+button {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+button {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  padding: 10px 30px;
+  min-width: 120px;
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+#restBtn,
+#calculatesBtn {
+  background-color: rgb(38, 194, 173);
+  color: hsl(183, 100%, 15%);
+  margin-top: 20px;
+}
+.output h3 {
+  color: white;
+}
+.output p {
+  color: hsl(185, 41%, 84%);
+}
+.tipAmount,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  color: rgb(38, 194, 173);
+  font-size: 48px;
+}
+.tip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+#billAmount,
+#numberOfPeople,
+#restBtn,
+#calculatesBtn {
+  width: 100%;
+}
+#billAmount,
+#numberOfPeople,
+.custom {
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+input {
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  border: none;
+  text-align: right;
+}
+button:hover {
+  background-color: #9fe8df;
+  color: hsl(183, 100%, 15%);
+  transition-duration: 500ms;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.error {
+  color: #c48776;
+}
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#restBtn:hover,
+#calculatesBtn:hover {
+  background-color: #9fe8df;
+}
+h3 {
+  color: #718181;
+}
+#billAmount {
+  background: url(Images/icon-dollar.svg) no-repeat scroll 11px 11px;
+}
+#numberOfPeople {
+  background: url(Images/icon-person.svg) no-repeat scroll 11px 11px;
+}
+#billAmount,
+#numberOfPeople {
+  padding-left: 30px;
+}
+.custom {
+  text-align: center;
+}
+.tip button,
+input {
+  width: 33%;
+  margin: 10px 0 5px 0;
+}
+.tip button,
+.custom {
+  max-width: 140px;
+}
+.tip {
+  max-width: 460px;
+}
+.input {
+  max-width: 520px;
+}
+.output {
+  max-width: 450px;
+}
+.output p {
+  margin-top: 0px;
+}
+.output h3 {
+  margin-bottom: 0px;
+}
+.selected {
+  background-color: rgb(38, 194, 173);
+}
+
+/* Media Queries */
+/* 1300px */
+@media only screen and (max-width: 1300px) {
+  .container {
+    width: 90vw;
+  }
+}
+/* 1150px */
+@media only screen and (max-width: 1150px) {
+  .tip button,
+  .custom {
+    min-width: 40px;
+    width: 30%;
+  }
+}
+/* 900px */
+@media only screen and (max-width: 1150px) {
+  .container {
+    width: 90vw;
+  }
+  .tip button,
+  .custom {
+    max-width: 250px;
+    width: 48%;
+  }
+  .tipAmount,
+  .total {
+    flex-direction: column;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: white;
+  }
+  .container {
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    border-radius: 0px;
+    align-items: center;
+  }
+  .input,
+  .output {
+    width: 100%;
+  }
+  .output {
+    width: 85%;
+    margin: 0px auto 20px auto;
+    padding: 20px;
+  }
+  .tip button,
+  .custom {
+    padding: 5px;
+    max-width: unset;
+    font-size: 20px;
+  }
+  p,
+  h3 {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  #restBtn,
+  #calculatesBtn {
+    font-size: 18px;
+  }
+  .tipAmount,
+  .total {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .tipAmount,
+  .total {
+    flex-direction: column;
+  }
+  .tip button,
+  .custom {
+    width: 100%;
+  }
+  #restBtn,
+  #calculatesBtn {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .container {
+    top: 0;
+    transform: translate(-50%, 0);
+    max-width: 2000px;
+    width: 100;
+  }
+  .input {
+    width: 66.66%;
+  }
+  .output {
+    width: 33.33%;
+  }
+  .input,
+  .output {
+    max-width: 1000px;
+  }
+}
